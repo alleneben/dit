@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+}
+.screen {
+    background: #ffffff;
+}
+.top {
+    height: 50vh;
+    background: black;
+    
+}
+.bottom {
+    background: red;
+    height: 50vh;
+}
+
+/* shapes */
+.shapes {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.square {
+    width: 100px;
+    height: 100px;
+    background: red;
+}
+.rectangle {
+    width: 200px;
+    height: 100px;
+    background: blue;
+}
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: red;
+}
+.oval {
+    width: 200px;
+    height: 100px;
+    border-radius: 100px / 50px;
+    background: blue;
+}
+.triangle-up {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid red; 
+}
+.triangle-down {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 100px solid blue;
+}
+
+#wave {
+    width: 96px;
+    background: #eee;
+    height: 48px;
+    box-sizing: content-box;
+
+    border-color: green;
+    border-style: solid;
+    border-width: 2px 2px 50px 2px;
+    /* border-radius: 100%; */
+    position: relative;
+
+}
+
+#wave::before {
+    content: '';
+    position: absolute;
+    background: #eee;
+    top: 60%;
+    left: 0;
+
+    border: 18px solid red;
+    border-radius: 50%;
+    width: 20px;
+    /* height: 20px; */
+    box-sizing: content-box;
+}
+#wave::after {
+    content: '';
+    position: absolute;
+    background: red;
+    border: 18px solid #eee;
+    top: 50%;
+    left: 50%;
+    border-radius: 100%;
+    width: 50px;
+}
